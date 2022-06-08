@@ -1,17 +1,18 @@
 import 'react-native-gesture-handler';
-import { NavigationContainer } from '@react-navigation/native';
-import { AppRegistry, StatusBar } from 'react-native';
-import { initialWindowMetrics, SafeAreaProvider, } from 'react-native-safe-area-context';
-import { enableScreens } from 'react-native-screens';
-import { QueryClient, QueryClientProvider } from 'react-query';
 import { ThemeProvider } from '@emotion/react';
+import { NavigationContainer, useNavigationContainerRef } from '@react-navigation/native';
 import log from 'loglevel';
+import { AppRegistry, StatusBar } from 'react-native';
+import { initialWindowMetrics, SafeAreaProvider } from 'react-native-safe-area-context';
+import { enableFreeze } from 'react-native-screens';
+import { QueryClient, QueryClientProvider } from 'react-query';
+
+import { navigation } from 'services';
 
 import { name as appName } from './app.json';
 import { Routes } from './src/routes';
-import { defaultTheme, routerTheme } from './src/themes';
 import { Splash } from './src/routes/Splash';
-import { navigation } from 'services';
+import { defaultTheme, routerTheme } from './src/themes';
 // import 'services/Notifications/notifications.config';
 
 const client = new QueryClient();
@@ -32,6 +33,7 @@ const linking = {
 };
 
 function App() {
+  const navigationRef = useNavigationContainerRef();
   return (
     <ThemeProvider theme={defaultTheme}>
       <QueryClientProvider client={client}>
@@ -39,14 +41,14 @@ function App() {
 
         <SafeAreaProvider initialMetrics={initialWindowMetrics}>
           <NavigationContainer
-            ref={navigation.navigationRef}
+            ref={navigationRef}
             fallback={<Splash name="Fallback route" />}
             linking={linking}
             onReady={() => {
               navigation.isReadyRef.current = true;
             }}
             theme={routerTheme}>
-            <Routes navigation={navigation} />
+            <Routes navigation={navigationRef} />
           </NavigationContainer>
         </SafeAreaProvider>
       </QueryClientProvider>
@@ -54,7 +56,8 @@ function App() {
   );
 }
 
-enableScreens();
+// https://github.com/software-mansion/react-native-screens#experimental-support-for-react-freeze
+enableFreeze(true);
 
 // Amplify.configure(awsExports);
 AppRegistry.registerComponent(appName, () => App);

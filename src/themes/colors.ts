@@ -17,7 +17,7 @@ export const light: ColorScheme = {
   surface3: `hsl(${hue}, 20%, 92%)`,
   surface4: `hsl(${hue}, 20%, 85%)`,
   surfaceshadow: `${hue}, 10%, 20%`,
-  shadowstrength: .02,
+  shadowstrength: 0.02,
 };
 
 export const dark: ColorScheme = {
@@ -33,7 +33,7 @@ export const dark: ColorScheme = {
   surface3: `hsl(${hue}, 5%,  20%)`,
   surface4: `hsl(${hue}, 5%, 25%)`,
   surfaceshadow: `${hue}, 50%, 3%`,
-  shadowstrength: .8,
+  shadowstrength: 0.8,
 };
 
 /* dim */
@@ -50,7 +50,7 @@ export const dim: ColorScheme = {
   surface3: `hsl(${hue}, 5%,  30%)`,
   surface4: `hsl(${hue}, 5%, 35%)`,
   surfaceshadow: `${hue}, 30%, 13%`,
-  shadowstrength: .2,
+  shadowstrength: 0.2,
 };
 
 // RN Shadow

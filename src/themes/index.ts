@@ -1,5 +1,5 @@
-import type { Theme as RouterTheme } from '@react-navigation/native';
 import type { Theme } from '@emotion/react';
+import type { Theme as RouterTheme } from '@react-navigation/native';
 
 import { light as theme } from './colors';
 

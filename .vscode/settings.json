@@ -1,0 +1,35 @@
+{
+  // We dont want problems with line-endings (CRLF vs LF)
+  "files.eol": "\n",
+
+  // Uses typescript version installed in the project, not the VSCode's
+  "typescript.tsdk": "node_modules/typescript/lib",
+
+  "editor.tabSize": 2,
+
+  // format-on-save works well if like this
+  "eslint.format.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.fixAll.eslint": true
+  },
+
+  "eslint.packageManager": "yarn",
+
+  // this helps eslint resolve Monorepo workspaces
+  "eslint.workingDirectories": [{ "mode": "auto" }],
+
+  "eslint.validate": [
+    "typescript",
+    "typescriptreact"
+  ],
+
+  // The formatter needs to be ESLint. These enforce that.
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescript]": {
+   "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+}

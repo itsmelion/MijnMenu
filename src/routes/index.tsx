@@ -1,23 +1,20 @@
-import { useEffect } from 'react';
-import { createNativeStackNavigator } from 'react-native-screens/native-stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 import { deeplinks, Notifications } from 'services';
 
+import type { RootStackParamList } from './routes.types';
+
 import { FoodStack } from './FoodStack';
+import { Splash } from './Splash';
 import { config } from './stack.config';
 
-const RootStack = createNativeStackNavigator();
+const RootStack = createNativeStackNavigator<RootStackParamList>();
 
 export const Routes = ({ navigation }) => {
   const isAuthenticated = true;
   const isLoading = false;
   deeplinks.useListenDynamicLinks(navigation);
   Notifications.useNotificationsHandler(navigation);
-  const { isConnected } = useNetInfo();
-
-  useEffect(() => {
-    if (!isConnected) navigation.navigate('Offline');
-  }, [isConnected, navigation]);
-
 
   if (isLoading) return <Splash name="Checking credentials" />;
 
