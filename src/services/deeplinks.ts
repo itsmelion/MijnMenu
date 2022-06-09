@@ -1,21 +1,22 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import dynamicLinks from '@react-native-firebase/dynamic-links';
+import { NavigationProp } from '@react-navigation/native';
 import log from 'loglevel';
 import queryString from 'query-string';
 import { useEffect } from 'react';
 
-function removeBaseURL(url) {
+function removeBaseURL(url: string) {
   const { query } = queryString.parseUrl(url);
-  return query.invitation;
+  return query.invitation as string;
 }
 
-export function useListenDynamicLinks(navigation) {
+export function useListenDynamicLinks(navigation: NavigationProp<Record<string, unknown>>) {
   // Foreground events
   // When the app is in the foreground (visible on the device), you can use the onLink method to subscribe to events as and when they happen:
 
   // Handle dynamic link inside your own application
   useEffect(() => {
-    async function saveCode(code) {
+    async function saveCode(code: string) {
       log.debug('code', code);
       if (!code) return null;
       await AsyncStorage.setItem('invitationCode', code);
@@ -36,7 +37,7 @@ export function useListenDynamicLinks(navigation) {
   // Background/Quit events
   // If the application is in a background state / has fully quit then the getInitialLink method can be used to detect whether the application was opened via a link:
   useEffect(() => {
-    async function saveCode(code) {
+    async function saveCode(code: string) {
       if (!code) return null;
       const localCode = await AsyncStorage.getItem('invitationCode');
       log.debug('code', code, localCode);
