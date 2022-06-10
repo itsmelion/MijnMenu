@@ -1,16 +1,13 @@
-import { createNativeStackNavigator, NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import type { RootStackParamList } from '../routes.types';
+import { Order } from './Order';
+import { OrdersList } from './OrdersList';
 
 const Stack = createNativeStackNavigator();
 
-type FoodStack = NativeStackNavigationProp<
-RootStackParamList,
-'Food'
->;
-
-export const FoodStack = ({ navigation }: FoodStackProps) => (
+export const FoodStack = () => (
   <Stack.Navigator>
-    <Stack.Screen component={Home} name="Home" options={stackConf} />
+    <Stack.Screen component={OrdersList} name="List" />
+    <Stack.Screen component={Order} name="Order" />
   </Stack.Navigator>
 );
