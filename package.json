@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.18.5",
-    "@babel/plugin-proposal-export-namespace-from": "^7.17.12",
+    "@babel/plugin-proposal-export-namespace-from": "7.17.12",
     "@babel/runtime": "7.18.3",
     "@emotion/babel-plugin": "11.9.2",
     "@emotion/eslint-plugin": "11.7.0",
