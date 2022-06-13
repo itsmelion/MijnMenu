@@ -14,8 +14,8 @@
     "lint:ci": "eslint --cache --ext js,jsx,tsx,ts ./src"
   },
   "dependencies": {
-    "@emotion/native": "11.0.0",
-    "@emotion/react": "11.9.0",
+    "@emotion/native": "11.9.3",
+    "@emotion/react": "11.9.3",
     "@hookform/error-message": "2.0.0",
     "@react-native-async-storage/async-storage": "1.17.6",
     "@react-native-community/netinfo": "9.0.0",
@@ -55,8 +55,8 @@
     "eslint-plugin-jsx-a11y": "6.5.1",
     "eslint-plugin-react": "7.30.0",
     "eslint-plugin-react-hooks": "4.5.0",
-    "metro-config": "0.71.0",
-    "metro-react-native-babel-preset": "0.71.0",
+    "metro-config": "0.71.1",
+    "metro-react-native-babel-preset": "0.71.1",
     "react-is": "18.1.0",
     "react-native-svg-transformer": "1.0.0",
     "reactotron-react-native": "5.0.2",
