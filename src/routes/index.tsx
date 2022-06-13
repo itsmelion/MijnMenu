@@ -1,9 +1,8 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import { deeplinks, Notifications } from 'services';
+// import { deeplinks, Notifications } from 'services';
 
 import type { RootStackParamList } from './routes.types';
-import type { NavigationProp } from '@react-navigation/native';
 
 import { FoodStack } from './FoodStack';
 import { Modal } from './Modal/Modal';
@@ -13,11 +12,11 @@ import { config } from './stack.config';
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
 
-export const Routes = ({ navigation }: { navigation: NavigationProp<Record<string, unknown>>}) => {
+export const Routes = () => {
   const isAuthenticated = true;
   const isLoading = false;
-  deeplinks.useListenDynamicLinks(navigation);
-  Notifications.useNotificationsHandler(navigation);
+  // deeplinks.useListenDynamicLinks(navigation);
+  // Notifications.useNotificationsHandler(navigation);
 
   if (isLoading) return <Splash name="Checking credentials" />;
 

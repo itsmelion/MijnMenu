@@ -1,11 +1,12 @@
-import { Oops as OopsVector } from 'assets/img/Oops/Oops.vector';
 import _ from 'lodash';
 import React from 'react';
 import { Image } from 'react-native';
 
+import { Oops as OopsVector } from '../../assets/img/Oops/Oops.vector';
+
 import {
   Button, Center, Headlines, Link, Spacer, Text,
-} from 'components';
+} from '../../components';
 
 import { Background } from './Modal.styled';
 
