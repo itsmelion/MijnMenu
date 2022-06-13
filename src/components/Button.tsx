@@ -69,12 +69,8 @@ interface ButtonTextProps {
 }
 export const StyledText = styled(Text)<ButtonTextProps>(({ theme, computedPadding, loading }) => ({
   color: 'white',
-  padding: parseRelativePadding({ theme, computedPadding }),
+  paddingVertical: theme.em(0.3, computedPadding),
+  paddingHorizontal: theme.em(1.5, theme.sizes.M),
   minWidth: theme.rem(14),
   opacity: loading ? 0 : 1,
 }));
-
-const parseRelativePadding = ({ theme, computedPadding }: { theme: Theme, computedPadding: number }) => `
-  ${theme.em(0.37, computedPadding)}
-  ${theme.em(2, theme.sizes.M)}
-`;

@@ -16,6 +16,14 @@ module.exports = function overrideBabelConfig(api) {
       ],
       [
         'module-resolver',
+        {
+          alias: {
+            services: './src/services/index.ts',
+            components: './src/components/index.ts',
+            themes: './src/themes',
+            routes: './src/routes',
+          },
+        },
       ],
     ],
   };

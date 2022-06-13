@@ -7,11 +7,12 @@ import { initialWindowMetrics, SafeAreaProvider } from 'react-native-safe-area-c
 import { enableFreeze } from 'react-native-screens';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
+import { navigation } from 'services';
+
+import { Routes, Splash } from 'routes';
+import { defaultTheme, routerTheme } from 'themes';
+
 import { name as appName } from './app.json';
-import { Routes } from './src/routes';
-import { Splash } from './src/routes/Splash';
-import { navigation } from './src/services';
-import { defaultTheme, routerTheme } from './src/themes';
 
 const client = new QueryClient();
 

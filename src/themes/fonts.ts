@@ -1,10 +1,10 @@
 export enum fonts {
-  Regular = 'Foco-Regular',
-  Bold = 'Foco-Bold',
-  Black = 'FocoBlack-Regular',
-  Italic = 'Foco-Italic',
-  Light = 'FocoLight-Regular',
-  Heading = 'JoyfulSoftness',
+  Regular = 'normal',
+  Bold = 'normal',
+  Black = 'normal',
+  Italic = 'normal',
+  Light = 'normal',
+  Heading = 'normal',
 }
 
 export type TFonts = keyof typeof fonts;

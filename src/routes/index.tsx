@@ -12,6 +12,13 @@ import { config } from './stack.config';
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
 
+export {
+  FoodStack,
+  Modal,
+  NotificationRouter,
+  Splash,
+};
+
 export const Routes = () => {
   const isAuthenticated = true;
   const isLoading = false;
