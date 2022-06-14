@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "494114874669",
+    "project_id": "mijnmenu-871dd",
+    "storage_bucket": "mijnmenu-871dd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:494114874669:android:cc7e69f807c05694af1fa4",
+        "android_client_info": {
+          "package_name": "online.mijnmenu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "494114874669-e11usmv2uqi2blk81bik89pdpntuglif.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPtWkNe3wd1tPGXvjCldJx5H2yve91SJA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "494114874669-e11usmv2uqi2blk81bik89pdpntuglif.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "494114874669-t39kjd5fe7ujgbin59arvd7vapudmukk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "online.mijnmenu"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
