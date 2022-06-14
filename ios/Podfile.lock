@@ -346,6 +346,8 @@ PODS:
   - React-jsinspector (0.69.0-rc.6)
   - React-logger (0.69.0-rc.6):
     - glog
+  - react-native-ios-modal (0.1.8):
+    - React
   - react-native-netinfo (9.0.0):
     - React-Core
   - react-native-safe-area-context (4.3.1):
@@ -493,6 +495,7 @@ DEPENDENCIES:
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
+  - react-native-ios-modal (from `../node_modules/react-native-ios-modal`)
   - "react-native-netinfo (from `../node_modules/@react-native-community/netinfo`)"
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
@@ -586,6 +589,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
   React-logger:
     :path: "../node_modules/react-native/ReactCommon/logger"
+  react-native-ios-modal:
+    :path: "../node_modules/react-native-ios-modal"
   react-native-netinfo:
     :path: "../node_modules/@react-native-community/netinfo"
   react-native-safe-area-context:
@@ -677,6 +682,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: ed108fa941c623dda1cf25b0487e506ae5cd597f
   React-jsinspector: 96a6f470b24a0918d6f207c55f9186ee6d987ab8
   React-logger: 4542bced257f3ef658671bbe354a27d76070bee9
+  react-native-ios-modal: 2894324e2590b0d5c50572370ccc4d640596e0e7
   react-native-netinfo: 5b664b2945a8f02102b296f0f812bddd6827ed9c
   react-native-safe-area-context: 6c12e3859b6f27b25de4fee8201cfb858432d8de
   React-perflogger: e3265731a720bfd153640721f0234e8167c49c2a
@@ -703,6 +709,6 @@ SPEC CHECKSUMS:
   Yoga: 30757bd18db6ed14e9788f601e375a563f08d525
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 06af52af66aaedb160a467155e7bff74bdfb1efe
+PODFILE CHECKSUM: a2d197d1e004dafadd2eb4ec5504dec7df2b8ae2
 
 COCOAPODS: 1.11.3
