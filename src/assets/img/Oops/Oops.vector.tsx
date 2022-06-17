@@ -8,7 +8,7 @@ type OopsType = React.FC<SvgProps> & {
 export const Oops: OopsType = ({ style, ...props }) => (
   <Svg
     style={[style, { aspectRatio: 1 }]}
-    viewBox="0 0 149 140"
+    viewBox="0 0 200 200"
     x="0"
     y="0"
     {...props}
