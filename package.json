@@ -78,6 +78,6 @@
   ],
   "license": "UNLICENSED",
   "optionalDependencies": {
-    "@types/react-native": "^0.68.0"
+    "@types/react-native": "^0.69.0"
   }
 }
