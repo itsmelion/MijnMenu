@@ -2,7 +2,8 @@ import 'react-native-gesture-handler';
 import { ThemeProvider } from '@emotion/react';
 import { NavigationContainer, useNavigationContainerRef } from '@react-navigation/native';
 import log from 'loglevel';
-import { AppRegistry, StatusBar } from 'react-native';
+import { useMemo } from 'react';
+import { AppRegistry, StatusBar, useColorScheme } from 'react-native';
 import { initialWindowMetrics, SafeAreaProvider } from 'react-native-safe-area-context';
 import { enableFreeze } from 'react-native-screens';
 import { QueryClient, QueryClientProvider } from 'react-query';
@@ -11,6 +12,9 @@ import { navigation } from 'services';
 
 import { Routes, Splash } from 'routes';
 import { defaultTheme, routerTheme } from 'themes';
+
+import { dark } from 'themes/colors';
+import { generateTheme } from 'themes/theme';
 
 import { name as appName } from './app.json';
 
@@ -33,8 +37,15 @@ const linking = {
 
 function App() {
   const navigationRef = useNavigationContainerRef();
+  const isDarkMode = useColorScheme() === 'dark';
+
+  const theme = useMemo(() => {
+    if (!isDarkMode) return defaultTheme;
+    return generateTheme({ colors: dark });
+  }, [isDarkMode]);
+
   return (
-    <ThemeProvider theme={defaultTheme}>
+    <ThemeProvider theme={theme}>
       <QueryClientProvider client={client}>
         <StatusBar barStyle="dark-content" />
 

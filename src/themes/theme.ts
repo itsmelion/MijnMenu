@@ -26,6 +26,7 @@ const defaultConfig = {
     get L() { return utils.px(sizes.L); },
     get XL() { return utils.px(sizes.XL); },
   },
+  colors,
   margins: {
     background: {
       horizontal: 1.5,
@@ -36,12 +37,13 @@ const defaultConfig = {
   },
 };
 
-export function generateTheme(config = defaultConfig) {
+// type ThemeShape = Partial<typeof defaultConfig> & { colors: ColorScheme };
+
+export function generateTheme(config: Partial<typeof defaultConfig> = defaultConfig) {
   const output = _.merge(config, defaultConfig);
 
   return {
     fonts: typography,
-    colors,
     ...utils,
     ...output,
   } as const;
