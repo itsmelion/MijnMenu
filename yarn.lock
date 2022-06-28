@@ -1408,10 +1408,10 @@
   resolved "https://registry.yarnpkg.com/@react-native-firebase/dynamic-links/-/dynamic-links-15.1.0.tgz#f28da14dd34e220270bd7250dab9cc588165f1b7"
   integrity sha512-Eg08Wvr12yo/k5A+eyog+78r663gPFQ3pYNSFo6QVC7KsIJR8d4o7bZIxnvzrzv3bVKkHkzNwPs7fRkm3YTf1w==
 
-"@react-native-firebase/messaging@15.1.0":
-  version "15.1.0"
-  resolved "https://registry.yarnpkg.com/@react-native-firebase/messaging/-/messaging-15.1.0.tgz#eb3de54ffe2ff77df18ac4c4d27d9c350ccdcc77"
-  integrity sha512-HBbNmDmAa2a28RMyE1V04jKK79YmJDXr8Y4Qqwwnr9zsDPinav20jFCdv7sAlppe9fx0cbqCxG1/62VCOReB4A==
+"@react-native-firebase/messaging@15.1.1":
+  version "15.1.1"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/messaging/-/messaging-15.1.1.tgz#3079ddc8aaba1a758495ee16d460653f5701e74e"
+  integrity sha512-oWN4/919U44jJQDKVd5+OIviIZ6jTZkMOVVvCLwtMh9WXI0tCd/E+be8zOjH3jHi6M0Zkf0IOXOd0QuwyrmQZw==
 
 "@react-native/assets@1.0.0":
   version "1.0.0"
