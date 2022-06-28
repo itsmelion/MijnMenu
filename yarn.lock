@@ -1209,10 +1209,10 @@
   resolved "https://registry.yarnpkg.com/@react-native-community/netinfo/-/netinfo-9.1.0.tgz#1de794ef6430c63827235ccebcbadfd84a1efe4f"
   integrity sha512-+CRWAcOpuqNia8g/DbS/Gh6/jZuDKUnaFG3hM8DZTqSgBAZ1Efewm0/KMHq0m/P5ZF6r3+1a9To5bW7jV1JO2Q==
 
-"@react-native-firebase/app@15.0.0":
-  version "15.0.0"
-  resolved "https://registry.yarnpkg.com/@react-native-firebase/app/-/app-15.0.0.tgz#1d47cbc57641a27dbc7abbd0590a2ee6edcc70b7"
-  integrity sha512-H4u50FaveRmKuzmKsbFUaq+9jFJrIcn2/auw441h24A0fcxAhKzlYQ6DK9IvoqCX/PKX1DZYrDo6UC/d4YjCGw==
+"@react-native-firebase/app@15.1.0":
+  version "15.1.0"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/app/-/app-15.1.0.tgz#2b19dcd8f7c3cdba253d79bcd30ee676bbf1d9a4"
+  integrity sha512-B/z27R2JDNr18saQd3sGsbQW39E7HPqPxxEy5O62+nMfVed/5iCPvuKCgd7psAKSwm08QS/22CnUZw9eKNLZ1Q==
   dependencies:
     "@expo/config-plugins" "^4.1.5"
     opencollective-postinstall "^2.0.1"
