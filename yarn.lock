@@ -5948,10 +5948,10 @@ react-native-ios-modal@0.1.8:
   resolved "https://registry.yarnpkg.com/react-native-ios-modal/-/react-native-ios-modal-0.1.8.tgz#c79a6e45ca7c42b57c5e277abc45fa9a3c9f63d9"
   integrity sha512-kA068hIhI9+r21OnRXzkRevGjGYTVAYf5kzsIFI15IrCiAkR40dE2lqJtOpnrB3lZ9KZeS0ph59qNNpDSG7xpA==
 
-react-native-permissions@3.3.1:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/react-native-permissions/-/react-native-permissions-3.3.1.tgz#8a359d9c0531afcde2f642a459b48c4c1e3e8f2d"
-  integrity sha512-Ap9nVWBWJ7lyU6Ye3Qltm2V+Ut6XjDcs+6ZBmK1UUxcCoSSGx/mQg2GbMJLjlnoVtUgVHR3IhyZ0mN9DlMPRFQ==
+react-native-permissions@3.4.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/react-native-permissions/-/react-native-permissions-3.4.0.tgz#7989bb079ec44a5c6308e5fe3dec6884dd851782"
+  integrity sha512-qNMFVPBhffuC7APZ7/etzlnrDGh7Givfq3pOI37GDjcenOFEOMFU8qyU+vRrrOwbUMuwtDAjWxe6ZBX1ZM+aAw==
 
 react-native-safe-area-context@4.3.1:
   version "4.3.1"
