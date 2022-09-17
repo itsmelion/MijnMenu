@@ -1417,10 +1417,10 @@
     opencollective-postinstall "^2.0.1"
     superstruct "^0.6.2"
 
-"@react-native-firebase/dynamic-links@15.4.0":
-  version "15.4.0"
-  resolved "https://registry.yarnpkg.com/@react-native-firebase/dynamic-links/-/dynamic-links-15.4.0.tgz#2fbb744354c005b9326657908943864a957bb2b9"
-  integrity sha512-xmFdKU1lCJqRh4d4q0nklQj+bI6G9zu4S2GLuhXuvEBJZnbMzXINJzQBaaML5pAtPZfnujm9wr4RD0omU0IN8g==
+"@react-native-firebase/dynamic-links@15.6.0":
+  version "15.6.0"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/dynamic-links/-/dynamic-links-15.6.0.tgz#79bd7db25e6dda4bc09575ad1354c6eccfeb21b9"
+  integrity sha512-xkuJdMaIIUdj6Dsvkvi3InuLh/+TpegvvV4azLj6AM7Uwl9iyWa6W5WMoWhJrwiKD4OEByBIg7mrRx9MmnaUAA==
 
 "@react-native-firebase/messaging@15.4.0":
   version "15.4.0"
