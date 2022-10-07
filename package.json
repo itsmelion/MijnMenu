@@ -31,7 +31,7 @@
     "loglevel": "1.8.0",
     "query-string": "7.1.1",
     "react": "18.2.0",
-    "react-hook-form": "7.36.1",
+    "react-hook-form": "7.37.0",
     "react-native": "0.70.2",
     "react-native-gesture-handler": "2.7.1",
     "react-native-ios-modal": "0.1.8",
