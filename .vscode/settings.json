@@ -32,4 +32,9 @@
   "[typescript]": {
    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#173136",
+    "titleBar.activeBackground": "#20454C",
+    "titleBar.activeForeground": "#F8FBFC"
+  },
 }
