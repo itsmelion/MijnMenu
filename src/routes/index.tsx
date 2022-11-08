@@ -9,6 +9,7 @@ import { Modal } from './Modal/Modal';
 import { NotificationRouter } from './NotificationRouter';
 import { Splash } from './Splash';
 import { config } from './stack.config';
+import { NavigationContainerRefWithCurrent } from '@react-navigation/native';
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
 
@@ -19,9 +20,14 @@ export {
   Splash,
 };
 
-export const Routes = () => {
+interface Routes {
+  navigation: NavigationContainerRefWithCurrent<ReactNavigation.RootParamList>
+}
+
+export const Routes = ({ navigation }: Routes) => {
   const isAuthenticated = true;
   const isLoading = false;
+  console.log(navigation);
   // deeplinks.useListenDynamicLinks(navigation);
   // Notifications.useNotificationsHandler(navigation);
 

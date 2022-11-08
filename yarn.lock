@@ -1555,6 +1555,11 @@
   resolved "https://registry.yarnpkg.com/@trysound/sax/-/sax-0.2.0.tgz#cccaab758af56761eb7bf37af6f03f326dd798ad"
   integrity sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==
 
+"@tsconfig/react-native@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@tsconfig/react-native/-/react-native-2.0.2.tgz#ac9b8ceb1de91e2f23ab89f915490a1a4afd65a0"
+  integrity sha512-OY+qydDk8Xw+VONvAFB6WTZAi3OP/KSQWNIeuJgkGFHGV3epw8qlctJQ35+fKGG4919nGbNS9ZI0JuZl1y8w2g==
+
 "@types/hammerjs@^2.0.36":
   version "2.0.41"
   resolved "https://registry.yarnpkg.com/@types/hammerjs/-/hammerjs-2.0.41.tgz#f6ecf57d1b12d2befcce00e928a6a097c22980aa"
