@@ -11,7 +11,7 @@ LogBox.ignoreLogs([
 Reactotron
   .setAsyncStorageHandler?.(AsyncStorage) // AsyncStorage would either come from `react-native` or `@react-native-community/async-storage` depending on where you get it from
   .configure({
-    name: 'Zwitsal Babynamen',
+    name: 'MjinMenu',
   })
   .useReactNative({
     asyncStorage: false, // there are more options to the async storage.

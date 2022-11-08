@@ -17,7 +17,7 @@ interface ButtonProps extends Omit<PressableProps, 'children'>{
   children?: string;
 }
 
-export const Button: React.FC = memo<ButtonProps>(({
+export const Button: React.FC<ButtonProps> = memo<ButtonProps>(({
   children = null,
   color = '#FF4611',
   title = '',

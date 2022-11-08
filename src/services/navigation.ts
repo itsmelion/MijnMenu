@@ -1,14 +1,13 @@
-import { StackActions } from '@react-navigation/native';
+import { StackActions, createNavigationContainerRef } from '@react-navigation/native';
 import log from 'loglevel';
 import { createRef } from 'react';
 
-export const navigationRef = createRef();
+export const navigationRef = createNavigationContainerRef();
 export const isReadyRef = createRef();
 
-export function navigate(...args) {
-  if (isReadyRef.current && navigationRef.current) {
-    // Perform navigation if the app has mounted
-    navigationRef.current.navigate(...args);
+export const navigate = (...args: Parameters<typeof navigationRef.navigate>) => {
+  if (navigationRef.isReady()) {
+    navigationRef.navigate(...args);
   } else {
     log.warn('ROUTER NOT MOUNTED');
     // You can decide what to do if the app hasn't mounted
@@ -16,10 +15,10 @@ export function navigate(...args) {
   }
 }
 
-export function push(...args) {
-  if (isReadyRef.current && navigationRef.current) {
+export function push(...args: Parameters<typeof navigationRef.navigate>) {
+  if (navigationRef.isReady()) {
     // Perform navigation if the app has mounted
-    navigationRef.current?.dispatch(StackActions.push(...args));
+    navigationRef.dispatch(StackActions.push(...args));
   } else {
     log.warn('ROUTER NOT MOUNTED');
     // You can decide what to do if the app hasn't mounted
@@ -27,10 +26,10 @@ export function push(...args) {
   }
 }
 
-export function dispatch(...args) {
-  if (isReadyRef.current && navigationRef.current) {
+export function dispatch(...args: Parameters<typeof navigationRef.navigate>) {
+  if (navigationRef.isReady()) {
     // Perform navigation if the app has mounted
-    navigationRef.current?.dispatch(...args);
+    navigationRef.dispatch(...args);
   } else {
     log.warn('ROUTER NOT MOUNTED');
     // You can decide what to do if the app hasn't mounted

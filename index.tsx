@@ -8,7 +8,7 @@ import { initialWindowMetrics, SafeAreaProvider } from 'react-native-safe-area-c
 import { enableFreeze } from 'react-native-screens';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
-import { navigation } from 'services';
+import { navigation, useQueryListeners } from 'services';
 
 import { Routes, Splash } from 'routes';
 import { defaultTheme, routerTheme } from 'themes';
@@ -36,8 +36,8 @@ const linking = {
 };
 
 function App() {
-  const navigationRef = useNavigationContainerRef();
   const isDarkMode = useColorScheme() === 'dark';
+  useQueryListeners();
 
   const theme = useMemo(() => {
     if (!isDarkMode) return defaultTheme;
@@ -51,14 +51,11 @@ function App() {
 
         <SafeAreaProvider initialMetrics={initialWindowMetrics}>
           <NavigationContainer
-            ref={navigationRef}
+            ref={navigation.navigationRef}
             fallback={<Splash name="Fallback route" />}
             linking={linking}
-            onReady={() => {
-              navigation.isReadyRef.current = true;
-            }}
             theme={routerTheme}>
-            <Routes navigation={navigationRef} />
+            <Routes navigation={navigation.navigationRef} />
           </NavigationContainer>
         </SafeAreaProvider>
       </QueryClientProvider>

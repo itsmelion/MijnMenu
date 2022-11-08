@@ -5,16 +5,22 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Food } from 'services';
 
 import { Button, Card, Text } from 'components';
+import { NativeScreenContainer } from 'react-native-screens';
+
+interface {
+  route: NativeScreenContainer
+}
 
 export const Order = () => {
   const navigation = useNavigation();
   const { params } = useRoute();
-  const { data: order } = Food.useOrder(params?.orderId || 'orderId');
+  const { data: order } = Food.useOrder(params?.orderId);
 
   return (
     <SafeAreaView>
       <Card>
         <Text>{`Im a order Item ${order}`}</Text>
+
         <Button
           onPress={navigation.goBack}
           title="Go back"

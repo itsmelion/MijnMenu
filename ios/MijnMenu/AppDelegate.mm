@@ -7,6 +7,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
   self.moduleName = @"MijnMenu";
+
+  #if !TARGET_OS_TV
+    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+  #endif
+
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
 
@@ -27,6 +32,13 @@
 - (BOOL)concurrentRootEnabled
 {
   return true;
+}
+
+- (void)applicationWillTerminate:(UIApplication *)application
+{
+  #if !TARGET_OS_TV
+    [[UIDevice currentDevice] endGeneratingDeviceOrientationNotifications];
+  #endif
 }
 
 @end

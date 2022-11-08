@@ -2,5 +2,6 @@ import { useQuery } from '@tanstack/react-query';
 
 export const useOrder = (orderId: string) => useQuery({
   queryKey: ['orders', orderId],
-  queryFn: async () => 1,
+  queryFn: async () => orderId,
+  enabled: !!orderId,
 });
