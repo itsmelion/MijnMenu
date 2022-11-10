@@ -38,15 +38,16 @@ export const Routes = ({ navigation }: Routes) => {
     <RootStack.Navigator
       initialRouteName="Food"
       screenOptions={config}>
-      {isAuthenticated && <RootStack.Screen component={FoodStack} name="Food" options={config} />}
+      {/* {isAuthenticated && <RootStack.Screen component={FoodStack} name="Food" options={config} />} */}
 
-      <RootStack.Screen
+      {/* <RootStack.Screen
         component={NotificationRouter}
         name="Notifications"
         options={config}
-      />
+      /> */}
 
       <RootStack.Screen component={Splash} name="Splash" options={config} />
+      <RootStack.Screen component={Splash} name="Falafel" options={config} />
 
       <RootStack.Screen
         component={Modal}

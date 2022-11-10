@@ -1,7 +1,7 @@
-import { ActivityIndicator } from 'react-native';
+import { ActivityIndicator, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { OrderSummary } from '../../components/Food/OrderList/OrderSummary';
+import { Meals } from '../../components';
 import { Food } from '../../services';
 
 export const OrdersList = () => {
@@ -9,8 +9,11 @@ export const OrdersList = () => {
 
   return (
     <SafeAreaView>
-      {(isLoading || !orders) ? <ActivityIndicator /> : orders
-        ?.map(order => <OrderSummary key={order} order={order} />)}
+      <ScrollView>
+        {(isLoading || !orders)
+          ? <ActivityIndicator />
+          : orders.map(order => <Meals.Item key={order} mealId={order} />)}
+      </ScrollView>
     </SafeAreaView>
   );
 };

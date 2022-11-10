@@ -20,6 +20,7 @@ export const Modal = ({ navigation, route }) => {
     imageSource,
     ImageInstance = <OopsVector width="40%" />,
   } = route?.params || {};
+
   const goTo = (routeConf) => () => (typeof routeConf === 'string'
     ? navigation.navigate(routeConf)
     : navigation.replace(...routeConf));
