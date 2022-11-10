@@ -13,7 +13,7 @@ export const navigate = (...args: Parameters<typeof navigationRef.navigate>) => 
     // You can decide what to do if the app hasn't mounted
     // You can ignore this, or add these actions to a queue you can call later
   }
-}
+};
 
 export function push(...args: Parameters<typeof navigationRef.navigate>) {
   if (navigationRef.isReady()) {

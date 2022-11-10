@@ -5,11 +5,6 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Food } from 'services';
 
 import { Button, Card, Text } from 'components';
-import { NativeScreenContainer } from 'react-native-screens';
-
-interface {
-  route: NativeScreenContainer
-}
 
 export const Order = () => {
   const navigation = useNavigation();

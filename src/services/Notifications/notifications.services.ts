@@ -16,8 +16,8 @@ export const askAllowNotification = function askAllowNotification() {
     .then(async ({ status }) => {
       if (status === 'granted') return deviceToken.getToken();
 
-      // eslint-disable-next-line promise/no-nesting
       return requestNotifications(['alert', 'sound'])
+        // eslint-disable-next-line promise/no-nesting
         .then(({ status: newStatus }) => {
           if (newStatus !== 'granted') return null;
           return deviceToken.getToken();

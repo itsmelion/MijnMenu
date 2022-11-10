@@ -3,12 +3,10 @@ import { Text } from '../Text/Text';
 
 export interface MealCardProps {
   mealId: unknown;
-};
+}
 
-export const Card = ({ mealId }: MealCardProps) => {
-  return (
-    <GenericCard>
-      <Text>{`Im a meal with ID: ${mealId}`}</Text>
-    </GenericCard>
-  );
-};
+export const Card = ({ mealId }: MealCardProps) => (
+  <GenericCard>
+    <Text>{`Im a meal with ID: ${mealId}`}</Text>
+  </GenericCard>
+);

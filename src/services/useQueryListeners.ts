@@ -1,30 +1,35 @@
-import NetInfo from '@react-native-community/netinfo'
-import { onlineManager, focusManager } from '@tanstack/react-query'
-import { AppState, Platform } from 'react-native'
-import type { AppStateStatus } from "react-native"
-import { useEffect } from "react"
+import NetInfo from '@react-native-community/netinfo';
+import { onlineManager, focusManager } from '@tanstack/react-query';
+import _ from 'lodash';
+import { useEffect } from 'react';
+import { AppState, Platform } from 'react-native';
+
+import type { AppStateStatus } from 'react-native';
 
 function onAppStateChange(status: AppStateStatus) {
   if (Platform.OS !== 'web') {
-    focusManager.setFocused(status === 'active')
+    focusManager.setFocused(status === 'active');
   }
 }
 
 function useOnlineManager() {
   useEffect(() => {
+    let unsubscribe = _.noop;
     // React Query already supports on reconnect auto refetch in web browser
     if (Platform.OS !== 'web') {
-      return NetInfo.addEventListener((state) => {
+      unsubscribe = NetInfo.addEventListener((state) => {
         onlineManager.setOnline(
-          state.isConnected != null &&
-            state.isConnected &&
-            Boolean(state.isInternetReachable)
+          // eslint-disable-next-line no-eq-null
+          state.isConnected != null
+            && state.isConnected
+            && Boolean(state.isInternetReachable),
         );
       });
     }
+
+    return () => { unsubscribe(); };
   }, []);
 }
-
 
 function useAppState(onChange: (status: AppStateStatus) => void) {
   useEffect(() => {
@@ -34,7 +39,6 @@ function useAppState(onChange: (status: AppStateStatus) => void) {
     };
   }, [onChange]);
 }
-
 
 export function useQueryListeners() {
   useOnlineManager();

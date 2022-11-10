@@ -6,7 +6,7 @@ import { Text } from '../Text/Text';
 
 export interface MealItemProps {
   mealId: unknown;
-};
+}
 
 export const Item = ({ mealId }: MealItemProps) => {
   const navigation = useNavigation();

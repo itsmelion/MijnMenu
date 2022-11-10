@@ -32,7 +32,7 @@ export const Text = styled.Text<TextProps>(({
   theme, font, bold, color, center, size, rem,
 }) => ({
   fontSize: sizing({ size, rem, theme }),
-  // fontFamily: defaultFont({ font, bold, theme }),
+  fontFamily: defaultFont({ font, bold, theme }),
   color,
   textAlign: center ? 'center' : 'left',
 }));
