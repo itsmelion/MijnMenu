@@ -2,11 +2,11 @@ import { Card as GenericCard } from '../Card';
 import { Text } from '../Text/Text';
 
 export interface MealCardProps {
-  mealId: unknown;
+  meal: unknown;
 }
 
-export const Card = ({ mealId }: MealCardProps) => (
+export const Card = ({ meal }: MealCardProps) => (
   <GenericCard>
-    <Text>{`Im a meal with ID: ${mealId}`}</Text>
+    <Text size="L">{`Im a meal with ID: ${meal?.id ?? meal}`}</Text>
   </GenericCard>
 );
