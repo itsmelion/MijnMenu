@@ -2,7 +2,7 @@ import { Card as GenericCard } from '../Card';
 import { Text } from '../Text/Text';
 
 export interface MealCardProps {
-  meal: unknown;
+  meal: Record<string, unknown>;
 }
 
 export const Card = ({ meal }: MealCardProps) => (

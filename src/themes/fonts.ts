@@ -1,11 +1,13 @@
-export enum fonts {
-  Regular = 'normal',
-  Bold = 'normal',
-  Black = 'normal',
-  Italic = 'normal',
-  Light = 'normal',
-  Heading = 'normal',
-}
+import { Platform } from 'react-native';
+
+export const fonts = {
+  Regular: Platform.OS === 'ios' ? 'Avenir' : 'sans-serif',
+  Bold: Platform.OS === 'ios' ? 'Avenir' : 'sans-serif',
+  Black: Platform.OS === 'ios' ? 'Avenir' : 'sans-serif',
+  Italic: Platform.OS === 'ios' ? 'Avenir' : 'sans-serif',
+  Light: Platform.OS === 'ios' ? 'Avenir' : 'sans-serif',
+  Heading: Platform.OS === 'ios' ? 'Avenir' : 'sans-serif',
+};
 
 export type TFonts = keyof typeof fonts;
 
