@@ -118,6 +118,7 @@
 				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
 				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
 				F54AC9D50AF81353ED27455F /* [CP-User] [RNFB] Core Configuration */,
+				570766213FBDACF56F5FB242 /* [RN]Copy Hermes framework */,
 			);
 			buildRules = (
 			);
@@ -204,6 +205,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MijnMenu/Pods-MijnMenu-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		570766213FBDACF56F5FB242 /* [RN]Copy Hermes framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[RN]Copy Hermes framework";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = ". ../node_modules/react-native/sdks/hermes-engine/utils/copy-hermes-xcode.sh";
 		};
 		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

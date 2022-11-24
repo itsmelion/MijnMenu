@@ -32,8 +32,8 @@
     "loglevel": "1.8.1",
     "query-string": "7.1.1",
     "react": "18.2.0",
-    "react-hook-form": "^7.40.0-next.0",
-    "react-native": "^0.71 || ^0.71.0-rc.0",
+    "react-hook-form": "^7.40.0-next.1",
+    "react-native": "^0.71 || ^0.71.0-rc.1",
     "react-native-gesture-handler": "^2.8.0",
     "react-native-ios-modal": "0.1.8",
     "react-native-permissions": "3.6.1",
@@ -49,7 +49,7 @@
     "@emotion/babel-plugin": "11.10.5",
     "@emotion/eslint-plugin": "11.10.0",
     "@tsconfig/react-native": "^2.0.2",
-    "@types/lodash": "4.14.189",
+    "@types/lodash": "4.14.190",
     "@typescript-eslint/eslint-plugin": "5.44.0",
     "@typescript-eslint/parser": "5.44.0",
     "babel-plugin-module-resolver": "4.1.0",
@@ -80,7 +80,8 @@
     }
   ],
   "license": "UNLICENSED",
+  "packageManager": "yarn@1.22.19",
   "optionalDependencies": {
-    "@types/react-native": "^0.71 || ^0.71-rc.0 || ^0.70.6"
+    "@types/react-native": "^0.71 || ^0.71-rc.0 || ^0.70.7"
   }
 }
