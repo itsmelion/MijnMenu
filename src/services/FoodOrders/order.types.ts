@@ -1,3 +1,5 @@
+import type { ImageKind } from '../types';
+
 export interface OrderResponse {
   id: string;
   menuFormId: string;
@@ -18,13 +20,13 @@ type Menu = {
   meals: Meal[];
 }
 
-type Meal = {
-  id: string;
-  productMealTypeId: string;
-  productMealTypeName: string;
-  productMealTypeIcon: string;
-  mealOptions: MealOption[];
-}
+// type Meal = {
+//   id: string;
+//   productMealTypeId: string;
+//   productMealTypeName: string;
+//   productMealTypeIcon: string;
+//   mealOptions: MealOption[];
+// }
 
 type MealOption = {
   mealOptionId: string;
@@ -34,4 +36,23 @@ type MealOption = {
   isSelected: boolean;
   isDefault: boolean;
   bufferLeftCount: number;
+}
+
+// Chris Types
+export interface Meal {
+  readonly id: string;
+
+  readonly name: string;
+  readonly description: string;
+
+  readonly images: {
+    detail: ImageKind;
+  };
+
+  readonly attributes: {
+    halal: boolean;
+    vegan: boolean;
+    milk: boolean;
+    nuts: boolean;
+  };
 }

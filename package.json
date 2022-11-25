@@ -33,7 +33,7 @@
     "query-string": "7.1.1",
     "react": "18.2.0",
     "react-hook-form": "^7.40.0-next.1",
-    "react-native": "^0.71 || ^0.71.0-rc.1",
+    "react-native": "^0.71 || ^0.71.0-rc.2",
     "react-native-gesture-handler": "^2.8.0",
     "react-native-ios-modal": "0.1.8",
     "react-native-permissions": "3.6.1",

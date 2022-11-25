@@ -21,6 +21,7 @@ export const Link: React.FC<ButtonProps & {
   children, title, disabled, onPress, ...props
 }) => {
   const handlePress = disabled ? () => null : onPress;
+
   return (
     <LinkStyles onPress={handlePress} {...props}>
       {title || children}

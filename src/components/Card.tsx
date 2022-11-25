@@ -10,7 +10,7 @@ const StyledView = styled.View({
 });
 
 export const Card: React.FC<ViewProps> = ({ children, ...props }) => (
-  <StyledView {...props}>
+  <StyledView {...props} style={{ elevation: 1 }}>
     {children}
   </StyledView>
 );

@@ -1,20 +1,22 @@
 import { useNavigation } from '@react-navigation/native';
 import { Pressable } from 'react-native';
 
+import { Food } from 'services';
+
 import { Card } from '../Card';
 import { Text } from '../Text/Text';
 
 export interface MealItemProps {
-  mealId: unknown;
+  meal: Food.Meal;
 }
 
-export const Item = ({ mealId }: MealItemProps) => {
+export const Item = ({ meal }: MealItemProps) => {
   const navigation = useNavigation();
 
   return (
-    <Pressable onPress={() => navigation.navigate('Order', { orderId: mealId })}>
+    <Pressable onPress={() => navigation.navigate('Order', { orderId: meal.id })}>
       <Card>
-        <Text>{`Im a meal with ID: ${mealId}`}</Text>
+        <Text>{`${meal.name} id(${meal.id})`}</Text>
       </Card>
     </Pressable>
   );

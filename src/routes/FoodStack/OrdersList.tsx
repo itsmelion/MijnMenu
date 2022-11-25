@@ -12,7 +12,7 @@ export const OrdersList = () => {
       <ScrollView>
         {(isLoading || !orders)
           ? <ActivityIndicator />
-          : orders.map(order => <Meals.Item key={order} mealId={order} />)}
+          : orders.map(order => <Meals.Item key={order} meal={order} />)}
       </ScrollView>
     </SafeAreaView>
   );

@@ -1,12 +1,26 @@
+import { Image } from 'react-native';
+
+import { Food } from 'services';
+
 import { Card as GenericCard } from '../Card';
 import { Text } from '../Text/Text';
 
 export interface MealCardProps {
-  meal: Record<string, unknown>;
+  meal: Food.Meal;
 }
 
 export const Card = ({ meal }: MealCardProps) => (
   <GenericCard>
-    <Text size="L">{`Im a meal with ID: ${meal?.id ?? meal}`}</Text>
+    <Image
+      source={require('../../assets/img/food-bowl/food-bowl.png')}
+      style={{
+        flexShrink: 0,
+        flexGrow: 1,
+        flexBasis: '100%',
+      }}
+    />
+
+    <Text size="L">{meal.name}</Text>
+    <Text size="M">{meal.description}</Text>
   </GenericCard>
 );

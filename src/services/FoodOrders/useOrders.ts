@@ -1,6 +1,8 @@
 import { useQuery } from '@tanstack/react-query';
 
+import * as mock from './mock';
+
 export const useOrders = () => useQuery({
   queryKey: ['orders'],
-  queryFn: async () => [0, 1, 2],
+  queryFn: async () => mock.orders,
 });
