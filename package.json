@@ -61,7 +61,7 @@
     "eslint-plugin-react": "7.31.11",
     "eslint-plugin-react-hooks": "4.6.0",
     "metro-config": "0.73.5",
-    "metro-react-native-babel-preset": "0.73.3",
+    "metro-react-native-babel-preset": "0.73.5",
     "react-is": "18.2.0",
     "react-native-svg-transformer": "1.0.0",
     "reactotron-react-native": "5.0.3",
