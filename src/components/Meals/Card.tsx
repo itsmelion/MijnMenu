@@ -17,6 +17,9 @@ export const Card = ({ meal }: MealCardProps) => (
         flexShrink: 0,
         flexGrow: 1,
         flexBasis: '100%',
+        width: undefined,
+        height: undefined,
+        resizeMode: 'contain',
       }}
     />
 
