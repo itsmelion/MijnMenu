@@ -26,7 +26,7 @@
     "@react-navigation/native-stack": "6.9.4",
     "@react-navigation/stack": "6.3.7",
     "@tanstack/react-query": "4.19.0",
-    "axios": "1.2.0",
+    "axios": "1.2.1",
     "dayjs": "1.11.6",
     "lodash": "4.17.21",
     "loglevel": "1.8.1",
