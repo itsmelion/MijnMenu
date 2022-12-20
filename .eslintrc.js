@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  extends: ['lion/react-native'],
+  extends: ['@react-native','lion/react-native'],
   plugins: ['@emotion'],
   parserOptions: {
     project: './tsconfig.json',
