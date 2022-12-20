@@ -1252,10 +1252,10 @@
     opencollective-postinstall "^2.0.1"
     superstruct "^0.6.2"
 
-"@react-native-firebase/dynamic-links@16.4.6":
-  version "16.4.6"
-  resolved "https://registry.yarnpkg.com/@react-native-firebase/dynamic-links/-/dynamic-links-16.4.6.tgz#d0fbe5482b5d16f67b1bed3106bc718d7dc33e5a"
-  integrity sha512-bZPdrLw1HbFVe/uHI/+p1iGA/g+9EDdP0ySmRE1GKEOX84xSZhOrjEdF5Yhzf/OGcekrG1WDlxIpwkEQCuDJpA==
+"@react-native-firebase/dynamic-links@16.5.0":
+  version "16.5.0"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/dynamic-links/-/dynamic-links-16.5.0.tgz#e531fbbf092efcc1a983f0acbfec42fcf576933d"
+  integrity sha512-/bTT25WluzHtdOvTWEqEMhmTy8YfgVRE6MNtjabXVdmLRw/aYp1Uk12DskNu9W+hfxbpyrQzV/gdcqQSL9ukGg==
   dependencies:
     "@expo/config-plugins" "^5.0.4"
 
