@@ -1,4 +1,5 @@
 #import "AppDelegate.h"
+#import <Firebase.h>
 
 #import <React/RCTBundleURLProvider.h>
 
@@ -11,6 +12,8 @@
   #if !TARGET_OS_TV
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
   #endif
+
+  [FIRApp configure];
 
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
