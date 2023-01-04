@@ -1,6 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { LogBox } from 'react-native';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import Reactotron from 'reactotron-react-native';
 
 LogBox.ignoreLogs([
@@ -8,19 +7,31 @@ LogBox.ignoreLogs([
   'Non-serializable values were found in the navigation state',
 ]);
 
+import { queryClient } from "./queryClient";
+import {
+  QueryClientManager,
+  reactotronReactQuery,
+} from "reactotron-react-query";
+
+const queryClientManager = new QueryClientManager({ queryClient });
+
 Reactotron
-  .setAsyncStorageHandler?.(AsyncStorage) // AsyncStorage would either come from `react-native` or `@react-native-community/async-storage` depending on where you get it from
+  .setAsyncStorageHandler?.(AsyncStorage)
+  .use(reactotronReactQuery(queryClientManager))
   .configure({
     name: 'MjinMenu',
+    onDisconnect: () => {
+      queryClientManager.unsubscribe();
+    },
   })
   .useReactNative({
-    asyncStorage: false, // there are more options to the async storage.
-    networking: { // optionally, you can turn it off with false.
-      ignoreUrls: /symbolicate/,
-    },
-    editor: false, // there are more options to editor
-    errors: false, // or turn it off with false
-    overlay: false, // just turning off overlay
+    // asyncStorage: false, // there are more options to the async storage.
+    // networking: { // optionally, you can turn it off with false.
+    //   ignoreUrls: /symbolicate/,
+    // },
+    // editor: false, // there are more options to editor
+    // errors: false, // or turn it off with false
+    // overlay: false, // just turning off overlay
   })
   .connect();
 
