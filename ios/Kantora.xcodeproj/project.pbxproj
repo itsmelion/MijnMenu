@@ -14,6 +14,7 @@
 		16F7F2F632809B79E101A4EE /* Pods_Kantora_KantoraTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508FDEE5631B6223E36441CA /* Pods_Kantora_KantoraTests.framework */; };
 		191AFC93AB124C8AD7CCADF5 /* Pods_Kantora.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D03689B97B2251C66B8786AD /* Pods_Kantora.framework */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		90967D082966D2FA00363A6F /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90967D072966D2FA00363A6F /* SwiftUIView.swift */; };
 		90D46AEE2965D99900014E36 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90D46AED2965D99900014E36 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,8 @@
 		5B7EB9410499542E8C5724F5 /* Pods-Kantora-KantoraTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kantora-KantoraTests.debug.xcconfig"; path = "Target Support Files/Pods-Kantora-KantoraTests/Pods-Kantora-KantoraTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Kantora/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-Kantora-KantoraTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kantora-KantoraTests.release.xcconfig"; path = "Target Support Files/Pods-Kantora-KantoraTests/Pods-Kantora-KantoraTests.release.xcconfig"; sourceTree = "<group>"; };
+		90967D062966D2F900363A6F /* Kantora-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Kantora-Bridging-Header.h"; sourceTree = "<group>"; };
+		90967D072966D2FA00363A6F /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		90D46AED2965D99900014E36 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D03689B97B2251C66B8786AD /* Pods_Kantora.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kantora.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -118,6 +121,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				90967D072966D2FA00363A6F /* SwiftUIView.swift */,
 				90D46AED2965D99900014E36 /* GoogleService-Info.plist */,
 				13B07FAE1A68108700A75B9A /* Kantora */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
@@ -125,6 +129,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				90967D062966D2F900363A6F /* Kantora-Bridging-Header.h */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -211,7 +216,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1420;
 					};
 				};
 			};
@@ -432,6 +437,7 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				90967D082966D2FA00363A6F /* SwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +456,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-Kantora-KantoraTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -477,6 +484,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-Kantora-KantoraTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = KantoraTests/Info.plist;
@@ -517,6 +525,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Kantora;
+				SWIFT_OBJC_BRIDGING_HEADER = "Kantora-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -542,6 +551,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Kantora;
+				SWIFT_OBJC_BRIDGING_HEADER = "Kantora-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
