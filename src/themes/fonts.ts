@@ -2,10 +2,10 @@ import { Platform } from 'react-native';
 
 export const fonts = {
   Regular: Platform.OS === 'ios' ? 'Avenir' : 'sans-serif',
-  Bold: Platform.OS === 'ios' ? 'Avenir' : 'sans-serif',
-  Black: Platform.OS === 'ios' ? 'Avenir' : 'sans-serif',
+  Bold: Platform.OS === 'ios' ? 'Avenir-Heavy' : 'sans-serif',
+  Black: Platform.OS === 'ios' ? 'Avenir-Black' : 'sans-serif',
   Italic: Platform.OS === 'ios' ? 'Avenir' : 'sans-serif',
-  Light: Platform.OS === 'ios' ? 'Avenir' : 'sans-serif',
+  Light: Platform.OS === 'ios' ? 'Avenir-Light' : 'sans-serif',
   Heading: Platform.OS === 'ios' ? 'Avenir' : 'sans-serif',
 };
 

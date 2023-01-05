@@ -6,12 +6,15 @@ import type { TextProps } from './Text.types';
 
 const defaultFont = ({ font, bold, theme }: TextProps & { theme: Theme }) => {
   if (bold) return theme.fonts.bold;
+  if (font === 'Light') return theme.fonts.light;
+  if (font === 'Bold') return theme.fonts.bold;
+  if (font === 'Black') return theme.fonts.black;
   if (font === 'Heading') return theme.fonts.heading;
   if (font === 'Light') return theme.fonts.light;
   return theme.fonts.default;
 };
 
-const sizing = ({ size, rem = 1, theme }: TextProps & { theme: Theme }): number => {
+const sizing = ({ size, rem, theme }: TextProps & { theme: Theme }): number => {
   if (!size || rem) return theme.rem(rem || 1, true) as number;
 
   if (_.isNumber(size) && _.isInteger(size)) {

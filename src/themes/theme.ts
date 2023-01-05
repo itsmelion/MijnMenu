@@ -2,7 +2,7 @@ import _ from 'lodash';
 
 import { light as colors } from './colors';
 import { typography } from './fonts';
-import * as utils from './utils';
+import { px, utils } from './utils';
 
 // type ConfigLike = ReturnType<typeof generateTheme>;
 
@@ -17,14 +17,16 @@ const sizes = {
 };
 
 const defaultConfig = {
+  ...utils,
+  fonts: typography,
   baseFontSize,
   sizes,
   fontSize: {
-    get XS() { return utils.px(sizes.XS); },
-    get S() { return utils.px(sizes.S); },
-    get M() { return utils.px(sizes.M); },
-    get L() { return utils.px(sizes.L); },
-    get XL() { return utils.px(sizes.XL); },
+    get XS() { return px(sizes.XS); },
+    get S() { return px(sizes.S); },
+    get M() { return px(sizes.M); },
+    get L() { return px(sizes.L); },
+    get XL() { return px(sizes.XL); },
   },
   colors,
   margins: {
@@ -42,11 +44,7 @@ const defaultConfig = {
 export function generateTheme(config: Partial<typeof defaultConfig> = defaultConfig) {
   const output = _.merge(config, defaultConfig);
 
-  return {
-    fonts: typography,
-    ...utils,
-    ...output,
-  } as const;
+  return output as typeof defaultConfig;
 }
 
 export const theme = generateTheme();

@@ -3,5 +3,8 @@ export type RootStackParamList = {
   Splash: undefined;
   Falafel: undefined;
   Food: undefined;
+  Dashboard: undefined;
+  Welcome: undefined;
+  Auth: undefined;
   Notifications: undefined;
 }

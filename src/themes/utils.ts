@@ -11,7 +11,7 @@ export function em(base = 1, fontSize = 16, asNumber = true) {
 }
 
 export function rem(this: Theme, base = 1, asNumber = true) {
-  return this.em(this.sizes.M, base, asNumber);
+  return em(this.sizes.M, base, asNumber);
 }
 
 export const toPx = (unit: number | string) => {
@@ -19,4 +19,8 @@ export const toPx = (unit: number | string) => {
   if (_.isString(unit)) return unit;
   if (unit === 0) return unit;
   return `${unit}px`;
+};
+
+export const utils = {
+  em, rem,
 };

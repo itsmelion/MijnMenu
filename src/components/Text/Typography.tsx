@@ -1,3 +1,5 @@
+import type { TextProps } from './Text.types';
+
 import { Text } from './Text';
 
 const HeadersSetup = {
@@ -5,8 +7,8 @@ const HeadersSetup = {
   accent: true,
 } as const;
 
-interface HeadlineProps {
-  children: React.ReactNode;
+interface HeadlineProps extends TextProps {
+  children?: React.ReactNode;
 }
 type HeadlineComponent = React.FC<HeadlineProps>;
 

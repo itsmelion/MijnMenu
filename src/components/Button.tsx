@@ -44,19 +44,17 @@ export const Button: React.FC<ButtonProps> = memo<ButtonProps>(({
   }, [center]);
 
   return inCenter(() => (
-    <Pressable disabled={off} {...props} pointerEvents="box-only">
-      <View style={{ backgroundColor: disabled ? '#C4C4C4' : color }}>
-        <StyledText
-          bold
-          center
-          computedPadding={computedPad}
-          loading={loading}
-          onLayout={onLayout}>
-          {title || children}
-        </StyledText>
+    <Pressable disabled={off} style={{ backgroundColor: disabled ? '#C4C4C4' : color, borderRadius: 6 }} {...props} pointerEvents="box-only">
+      <StyledText
+        bold
+        center
+        computedPadding={computedPad}
+        loading={loading}
+        onLayout={onLayout}>
+        {title || children}
+      </StyledText>
 
-        {loading && <ActivityIndicator color="white" style={StyleSheet.absoluteFill} />}
-      </View>
+      {loading && <ActivityIndicator color="white" style={StyleSheet.absoluteFill} />}
     </Pressable>
   ));
 });
@@ -67,10 +65,10 @@ interface ButtonTextProps {
   loading?: boolean;
   onLayout?: (event: LayoutChangeEvent) => void;
 }
+
 export const StyledText = styled(Text)<ButtonTextProps>(({ theme, computedPadding, loading }) => ({
   color: 'white',
   paddingVertical: theme.em(0.3, computedPadding),
   paddingHorizontal: theme.em(1.5, theme.sizes.M),
-  minWidth: theme.rem(14),
   opacity: loading ? 0 : 1,
 }));
