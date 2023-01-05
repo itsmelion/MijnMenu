@@ -1,14 +1,13 @@
 import 'react-native-gesture-handler';
 import { ThemeProvider } from '@emotion/react';
-import { NavigationContainer, useNavigationContainerRef } from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
+import { QueryClientProvider } from '@tanstack/react-query';
 import log from 'loglevel';
 import { useMemo } from 'react';
 import { AppRegistry, StatusBar, useColorScheme } from 'react-native';
 import { initialWindowMetrics, SafeAreaProvider } from 'react-native-safe-area-context';
 import { enableFreeze } from 'react-native-screens';
-import { QueryClientProvider } from '@tanstack/react-query';
 
-import { queryClient } from "./src/services/queryClient";
 import { navigation, useQueryListeners } from 'services';
 
 import { Routes, Splash } from 'routes';
@@ -18,7 +17,7 @@ import { dark } from 'themes/colors';
 import { generateTheme } from 'themes/theme';
 
 import { name as appName } from './app.json';
-
+import { queryClient } from './src/services/queryClient';
 
 if (__DEV__) {
   import('./src/services/debuggers')
