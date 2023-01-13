@@ -415,14 +415,14 @@ PODS:
     - FirebaseCoreExtension (= 10.3.0)
     - React-Core
     - RNFBApp
-  - RNGestureHandler (2.8.0):
+  - RNGestureHandler (2.9.0):
     - React-Core
   - RNPermissions (3.6.1):
     - React-Core
   - RNScreens (3.18.2):
     - React-Core
     - React-RCTImage
-  - RNSVG (13.6.0):
+  - RNSVG (13.7.0):
     - React-Core
   - Yoga (1.14.0)
 
@@ -669,10 +669,10 @@ SPEC CHECKSUMS:
   RNFBApp: 2b3e57f4eecd9cfe8a5dd2ea8ed27a87fbc6eada
   RNFBDynamicLinks: f5ce579405932828dd668d4217597e633f73d270
   RNFBMessaging: c88867b6c9d16d3ba349c7ab4a1a8948fb71e2f6
-  RNGestureHandler: 62232ba8f562f7dea5ba1b3383494eb5bf97a4d3
+  RNGestureHandler: 071d7a9ad81e8b83fe7663b303d132406a7d8f39
   RNPermissions: dcdb7b99796bbeda6975a6e79ad519c41b251b1c
   RNScreens: 34cc502acf1b916c582c60003dc3089fa01dc66d
-  RNSVG: 3a79c0c4992213e4f06c08e62730c5e7b9e4dc17
+  RNSVG: d787d64ca06b9158e763ad2638a8c4edce00782a
   Yoga: c618b544ff8bd8865cdca602f00cbcdb92fd6d31
 
 PODFILE CHECKSUM: 20abe1766840c274ae92723493a8fe7804be92c4
