@@ -9,8 +9,8 @@ export const light: ColorScheme = {
   saturation,
   lightness,
 
-  brand: `hsl(${hue}, ${saturation}, ${lightness})`,
-  text1: `hsl(${hue}, ${saturation}, 10%)`,
+  brand: `hsl(${hue}, ${saturation}%, ${lightness}%)`,
+  text1: `hsl(${hue}, ${saturation}%, 10%)`,
   text2: `hsl(${hue}, 30%, 30%)`,
   surface1: `hsl(${hue}, 25%, 90%)`,
   surface2: `hsl(${hue}, 20%, 99%)`,
@@ -25,7 +25,7 @@ export const dark: ColorScheme = {
   saturation,
   lightness,
 
-  brand: `hsl(${hue}, ${saturation / 2}, ${lightness / 1.5})`,
+  brand: `hsl(${hue}, ${saturation / 2}%, ${lightness / 1.5}%)`,
   text1: `hsl(${hue}, 15%, 85%)`,
   text2: `hsl(${hue}, 5%, 65%)`,
   surface1: `hsl(${hue}, 10%, 10%)`,
@@ -42,7 +42,7 @@ export const dim: ColorScheme = {
   saturation,
   lightness,
 
-  brand: `hsl(${hue}, ${saturation / 1.25}, ${lightness / 1.25})`,
+  brand: `hsl(${hue}, ${saturation / 1.25}%, ${lightness / 1.25}%)`,
   text1: `hsl(${hue}, 15%, 75%)`,
   text2: `hsl(${hue}, 10%, 61%)`,
   surface1: `hsl(${hue}, 10%, 20%)`,

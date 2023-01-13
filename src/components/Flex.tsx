@@ -12,7 +12,7 @@ enum FlexNames {
   noshrink = '1 0 auto',
 }
 
-const flexRules = (rule: FlexProps['flex'] = FlexNames.none) => {
+const flexRules = (rule: FlexProps['flex'] = 'none') => {
   if (_.isString(rule)) {
     return css`flex: ${FlexNames[rule as unknown as keyof typeof FlexNames]};`;
   }
@@ -28,7 +28,7 @@ const flexRules = (rule: FlexProps['flex'] = FlexNames.none) => {
 };
 
 interface FlexProps {
-  flex?: FlexNames | boolean;
+  flex?: keyof typeof FlexNames | boolean;
 }
 
 export const Flex = styled.View<FlexProps>`

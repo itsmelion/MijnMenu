@@ -1,25 +1,26 @@
 import styled from '@emotion/native';
 import { Theme } from '@emotion/react';
+
 import { useCallback, useState, memo } from 'react';
 import {
-  PressableProps, LayoutChangeEvent, Pressable, View, ActivityIndicator, StyleSheet,
+  PressableProps, LayoutChangeEvent, ActivityIndicator, StyleSheet, ColorValue,
 } from 'react-native';
 
-import { Center } from './Center';
-import { Text } from './Text/Text';
+import { Center } from '../Center';
+import { Flex } from '../Flex';
+import { Text } from '../Text/Text';
+import { Pressable } from './Button.styled';
 
-interface ButtonProps extends Omit<PressableProps, 'children'>{
-  color?: string;
+export interface ButtonProps extends PressableProps {
+  color?: ColorValue;
   title?: string;
   disabled?: boolean;
   loading?: boolean;
   center?: boolean;
-  children?: string;
 }
 
 export const Button: React.FC<ButtonProps> = memo<ButtonProps>(({
   children = null,
-  color = '#FF4611',
   title = '',
   disabled = false,
   loading = false,
@@ -44,17 +45,24 @@ export const Button: React.FC<ButtonProps> = memo<ButtonProps>(({
   }, [center]);
 
   return inCenter(() => (
-    <Pressable disabled={off} style={{ backgroundColor: disabled ? '#C4C4C4' : color, borderRadius: 6 }} {...props} pointerEvents="box-only">
-      <StyledText
-        bold
-        center
-        computedPadding={computedPad}
-        loading={loading}
-        onLayout={onLayout}>
-        {title || children}
-      </StyledText>
+    <Pressable
+      disabled={off}
+      {...props}
+      pointerEvents="box-only">
+      {children || (
+        <Flex>
+          <StyledText
+            bold
+            center
+            computedPadding={computedPad}
+            loading={loading}
+            onLayout={onLayout}>
+            {title}
+          </StyledText>
 
-      {loading && <ActivityIndicator color="white" style={StyleSheet.absoluteFill} />}
+          {loading && <ActivityIndicator color="white" style={StyleSheet.absoluteFill} />}
+        </Flex>
+      )}
     </Pressable>
   ));
 });
@@ -68,7 +76,7 @@ interface ButtonTextProps {
 
 export const StyledText = styled(Text)<ButtonTextProps>(({ theme, computedPadding, loading }) => ({
   color: 'white',
-  paddingVertical: theme.em(0.3, computedPadding),
-  paddingHorizontal: theme.em(1.5, theme.sizes.M),
+  paddingVertical: theme.em(0.5, computedPadding),
+  paddingHorizontal: theme.em(1, theme.sizes.M),
   opacity: loading ? 0 : 1,
 }));
