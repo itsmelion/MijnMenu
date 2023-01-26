@@ -12,4 +12,9 @@ export interface ColorScheme {
   surface4: string;
   surfaceshadow: string;
   shadowstrength: number;
+
+  lime: {
+    0: string;
+    1: string;
+  },
 }

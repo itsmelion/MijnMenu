@@ -1,8 +1,8 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import { config } from '../stack.config';
 import { Order } from './Order';
 import { OrdersList } from './OrdersList';
+import { config } from '../stack.config';
 
 const Stack = createNativeStackNavigator();
 

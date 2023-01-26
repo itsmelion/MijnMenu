@@ -402,15 +402,15 @@ PODS:
     - React-perflogger (= 0.71.1)
   - RNCAsyncStorage (1.17.11):
     - React-Core
-  - RNFBApp (16.5.1):
+  - RNFBApp (16.5.2):
     - Firebase/CoreOnly (= 10.3.0)
     - React-Core
-  - RNFBDynamicLinks (16.5.1):
+  - RNFBDynamicLinks (16.5.2):
     - Firebase/DynamicLinks (= 10.3.0)
     - GoogleUtilities/AppDelegateSwizzler
     - React-Core
     - RNFBApp
-  - RNFBMessaging (16.5.1):
+  - RNFBMessaging (16.5.2):
     - Firebase/Messaging (= 10.3.0)
     - FirebaseCoreExtension (= 10.3.0)
     - React-Core
@@ -666,9 +666,9 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: 311feb67600774723fe10eb8801d3138cae9ad67
   ReactCommon: fa9f2604824fa93b3504e8c1cd2670fc58e1d2df
   RNCAsyncStorage: 8616bd5a58af409453ea4e1b246521bb76578d60
-  RNFBApp: 1f48f0e6e976f8b7cc1ead051479fa4051727eb8
-  RNFBDynamicLinks: 73cc22d7ad126d9c07ac5ea962fd7e08ed5a964d
-  RNFBMessaging: b825eb010383a5d21616082071f521a8883be2f5
+  RNFBApp: 93d1a4e5ce5d2d20d721adf866d1a0c4b58e6432
+  RNFBDynamicLinks: 717b51f35b8ad09caabb360734381c0f15045e9a
+  RNFBMessaging: 0dba94898b272142467bb3011ae107d0498a7bec
   RNGestureHandler: 071d7a9ad81e8b83fe7663b303d132406a7d8f39
   RNPermissions: dcdb7b99796bbeda6975a6e79ad519c41b251b1c
   RNScreens: ea4cd3a853063cda19a4e3c28d2e52180c80f4eb

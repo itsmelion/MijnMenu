@@ -4,14 +4,13 @@ import type { Theme } from '@emotion/react';
 
 export function px(unit: number) { return `${unit}px`; }
 
-export function em(base = 1, fontSize = 16, asNumber = true) {
+export function em(base = 1, fontSize = 16) {
   const rounded = _.round(fontSize * base, 2);
-  if (asNumber) return rounded;
-  return px(rounded);
+  return rounded;
 }
 
-export function rem(this: Theme, base = 1, asNumber = true) {
-  return em(this.sizes.M, base, asNumber);
+export function rem(this: Theme, base = 1) {
+  return em(this.sizes.M, base);
 }
 
 export const toPx = (unit: number | string) => {
