@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>494114874669-t39kjd5fe7ujgbin59arvd7vapudmukk.apps.googleusercontent.com</string>
+	<string>127606040466-egrf6522kjd25lhni55qmg1csavfp9og.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.494114874669-t39kjd5fe7ujgbin59arvd7vapudmukk</string>
+	<string>com.googleusercontent.apps.127606040466-egrf6522kjd25lhni55qmg1csavfp9og</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCnMwlDWqNlwDNsGYOcbcTZsDMst2OihlQ</string>
+	<string>AIzaSyAZCS1uUMIENuS7E8H2wnyY2_ssh-HFaXc</string>
 	<key>GCM_SENDER_ID</key>
-	<string>494114874669</string>
+	<string>127606040466</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>online.mijnmenu</string>
+	<string>nl.kantora</string>
 	<key>PROJECT_ID</key>
-	<string>mijnmenu-871dd</string>
+	<string>firekantora</string>
 	<key>STORAGE_BUCKET</key>
-	<string>mijnmenu-871dd.appspot.com</string>
+	<string>firekantora.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:494114874669:ios:5b01b01efeb5f6ebaf1fa4</string>
+	<string>1:127606040466:ios:3ec24b01e9e0735a90434b</string>
 </dict>
 </plist>
