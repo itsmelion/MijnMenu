@@ -71,7 +71,7 @@
     "react-native-svg-transformer": "1.0.0",
     "reactotron-react-native": "^5.0.3",
     "reactotron-react-query": "^1.0.2",
-    "typescript": "4.9.4"
+    "typescript": "4.9.5"
   },
   "optionalDependencies": {
     "@types/react-native": "^0.71.1"
