@@ -1,6 +1,6 @@
 import { View } from 'react-native';
 
-import { User } from 'services';
+import { navigation, User } from 'services';
 
 import {
   Text, Headlines, HStack, Button,
@@ -18,7 +18,7 @@ export const HelloHeader = () => {
         <Text font="Light" size="M" title={user.name} />
       </View>
 
-      <Button title="config" />
+      <Button onPress={() => navigation.navigate('Settings')} title="config" />
     </HStack>
   );
 };

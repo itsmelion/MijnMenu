@@ -7,4 +7,5 @@ export type RootStackParamList = {
   Welcome: undefined;
   Auth: undefined;
   Notifications: undefined;
+  Settings: undefined;
 }

@@ -14,6 +14,7 @@ import { DashboardStack } from './Dashboard';
 import { FoodStack } from './FoodStack';
 import { Modal } from './Modal/Modal';
 import { NotificationRouter } from './NotificationRouter';
+import { SettingsStack } from './Settings';
 import { Splash } from './Splash';
 import { config } from './stack.config';
 import { WelcomeStack } from './Welcome';
@@ -59,6 +60,7 @@ export const Routes = ({ navigation }: MainRouterProps) => {
       )}
 
       <RootStack.Screen component={Splash} name="Splash" options={config} />
+      <RootStack.Screen component={SettingsStack} name="Settings" options={config} />
       <RootStack.Screen
         component={Modal}
         name="Modal"
