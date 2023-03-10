@@ -1,4 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
 
 export interface User {
   name: string;
@@ -9,11 +10,9 @@ export interface User {
 export function useUser() {
   return useQuery({
     queryKey: ['user'],
-    queryFn: async (): Promise<User> => ({
-      name: 'Christhopher Leao',
-      user: 'Christhopher Leao',
-      email: 'christhopher.leao@dephion.com',
-    }),
+    queryFn: () => axios
+      .get('http://localhost:5001/firekantora/europe-west1/user')
+      .then(({ data }) => data),
     staleTime: Infinity,
   });
 }
