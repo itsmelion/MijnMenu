@@ -6661,10 +6661,10 @@ react-native-gradle-plugin@^0.71.16:
   resolved "https://registry.yarnpkg.com/react-native-gradle-plugin/-/react-native-gradle-plugin-0.71.16.tgz#822bb0c680e03b5df5aa65f2e5ffc2bc2930854a"
   integrity sha512-H2BjG2zk7B7Wii9sXvd9qhCVRQYDAHSWdMw9tscmZBqSP62DkIWEQSk4/B2GhQ4aK9ydVXgtqR6tBeg3yy8TSA==
 
-react-native-permissions@3.7.3:
-  version "3.7.3"
-  resolved "https://registry.yarnpkg.com/react-native-permissions/-/react-native-permissions-3.7.3.tgz#4a417f3a0ece03cf682fb5b80b8c72adcf05860a"
-  integrity sha512-kHf79ygx1jP58IuaUimxj8McQK85OwerN8dnndOhgG8eyLeJMNiBFafKizbxFSCCCo1jmAAbTpA3iLM0UhHpbQ==
+react-native-permissions@3.8.0:
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/react-native-permissions/-/react-native-permissions-3.8.0.tgz#7c1f75ae126c7d0b863eec9d2f5cd93ff8ad8310"
+  integrity sha512-BfZ7ksgdpGchHZH8M/kxCGZbWeACANbnPmb3hNjVOMDQusc4PWlPpobX3eBqYMSKbpi7bMECeV9BVU4QuwAf9A==
   dependencies:
     picocolors "^1.0.0"
     pkg-dir "^5.0.0"
